@@ -14,7 +14,7 @@ const mods = [
     category: "remastered",
     categoryLabel: "REMASTERED",
     badge: "TENSEIGAN VISUAL",
-    description: "Project Remastered by Rieyu Xhen dengan tema atmosfer chakra Toneri Ōtsutsuki. Ganti deskripsi ini sesuai build yang dirilis.",
+    description: "Informasi APK Naruto Senki Remastered V1.23. Detail ukuran file dan tautan unduhan akan diperbarui saat tersedia.",
     size: "Ukuran belum ditambahkan",
     symbol: "RX",
     image: "assets/toneri-banner.jpg",
