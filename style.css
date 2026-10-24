@@ -664,63 +664,71 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .tools-section { padding-top: 55px; }
 .tool-card {
   display: grid;
-  grid-template-columns: minmax(180px, 0.8fr) minmax(0, 1.5fr);
+  grid-template-columns: minmax(220px, 0.72fr) minmax(0, 1.6fr);
   align-items: center;
-  gap: 32px;
+  gap: clamp(28px, 5vw, 64px);
   margin-top: 30px;
-  padding: 26px;
+  padding: clamp(22px, 4vw, 42px);
   overflow: hidden;
-  border: 1px solid var(--line);
-  border-radius: 10px;
+  position: relative;
+  border: 1px solid rgba(18, 235, 212, 0.24);
+  border-radius: 16px;
   background:
-    radial-gradient(ellipse at 15% 50%, rgba(18, 235, 212, 0.12), transparent 45%),
-    linear-gradient(145deg, rgba(10, 22, 34, 0.96), rgba(5, 11, 18, 0.98));
-  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+    radial-gradient(ellipse at 12% 50%, rgba(18, 235, 212, 0.13), transparent 38%),
+    radial-gradient(ellipse at 100% 0%, rgba(56, 200, 255, 0.08), transparent 42%),
+    linear-gradient(145deg, rgba(10, 24, 36, 0.98), rgba(4, 10, 17, 0.99));
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.34), inset 0 1px rgba(255, 255, 255, 0.035);
+}
+.tool-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--accent-light), var(--accent-blue), transparent);
 }
 .tool-visual {
-  position: relative;
-  min-height: 180px;
-  display: grid;
-  grid-template-columns: repeat(2, 58px);
-  grid-template-rows: repeat(2, 58px);
-  align-content: center;
+  min-height: 245px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 7px;
-  border: 1px solid rgba(18, 235, 212, 0.16);
-  border-radius: 8px;
-  background-image:
-    linear-gradient(rgba(114, 255, 240, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(114, 255, 240, 0.045) 1px, transparent 1px);
-  background-size: 18px 18px;
+  gap: 14px;
+  padding: 22px 16px;
+  border: 1px solid rgba(114, 255, 240, 0.12);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 50% 35%, rgba(18, 235, 212, 0.13), transparent 48%),
+    linear-gradient(145deg, rgba(6, 20, 30, 0.82), rgba(4, 11, 18, 0.72));
 }
-.tool-tile {
-  display: block;
-  border: 1px solid rgba(114, 255, 240, 0.58);
-  border-radius: 5px;
-  background: linear-gradient(145deg, rgba(18, 235, 212, 0.38), rgba(18, 235, 212, 0.06));
-  box-shadow: inset 0 0 18px rgba(18, 235, 212, 0.1), 0 0 12px rgba(18, 235, 212, 0.12);
+.tool-icon {
+  width: clamp(142px, 15vw, 184px);
+  height: clamp(142px, 15vw, 184px);
+  object-fit: cover;
+  border-radius: 26px;
+  border: 1px solid rgba(150, 255, 248, 0.58);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.34), 0 0 30px rgba(18, 235, 212, 0.23);
 }
-.tile-two { transform: scale(0.72); }
-.tile-three { transform: scale(0.82); }
-.tile-four { transform: scale(0.62); }
-.tool-grid-mark {
-  position: absolute;
-  right: 12px;
-  bottom: 10px;
-  color: rgba(114, 255, 240, 0.7);
-  font: 800 11px/1 var(--display);
+.tool-icon-caption {
+  color: #bcefeb;
+  font: 700 10px/1 var(--body);
   letter-spacing: 1.5px;
+  text-transform: uppercase;
+  opacity: 0.82;
 }
 .tool-card-copy { min-width: 0; }
 .tool-status {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin: 0 0 10px;
-  color: var(--accent-light);
+  gap: 9px;
+  margin: 0 0 20px;
+  padding: 8px 11px;
+  border: 1px solid rgba(116, 255, 158, 0.2);
+  border-radius: 999px;
+  color: #aaf5bd;
+  background: rgba(116, 255, 158, 0.055);
   font-size: 9px;
   font-weight: 800;
-  letter-spacing: 1.6px;
+  letter-spacing: 1.3px;
 }
 .tool-status > span:first-child {
   width: 7px;
@@ -734,21 +742,42 @@ button, a { -webkit-tap-highlight-color: transparent; }
   box-shadow: 0 0 10px rgba(116, 255, 158, 0.7);
 }
 .tool-card-copy h3 {
-  margin: 0 0 10px;
-  font: 800 clamp(25px, 4vw, 36px)/1 var(--display);
-  letter-spacing: 0.5px;
+  margin: 20px 0 0;
+  color: transparent;
+  background: linear-gradient(100deg, #effbfb 5%, #d8f7f4 55%, #c4eeec 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font: 800 clamp(38px, 5vw, 56px)/0.98 var(--display);
+  letter-spacing: 0.2px;
+  text-shadow: 0 4px 18px rgba(18, 235, 212, 0.07);
 }
 .tool-card-copy h3 span {
   color: var(--accent-light);
 }
-.tool-download { margin-top: 18px; }
-.tool-card-copy > p:not(.tool-status) {
-  max-width: 580px;
-  margin: 0;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
+.tool-download {
+  min-height: 48px;
+  margin-top: 24px;
+  padding-inline: 22px;
+  border-radius: 7px;
 }
+.tool-description {
+  max-width: 680px;
+  color: #a9c0cc;
+  font-size: 13px;
+  line-height: 1.85;
+}
+.tool-description p { margin: 0 0 14px; }
+.tool-description p:last-child {
+  margin: 20px 0 0;
+  padding: 12px 16px;
+  border-left: 2px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  color: var(--accent-light);
+  background: linear-gradient(90deg, rgba(18, 235, 212, 0.09), rgba(18, 235, 212, 0.015));
+  font-size: 12px;
+  line-height: 1.6;
+}
+.tool-description strong { font-weight: 700; }
 .tool-coming-soon {
   display: inline-block;
   margin-top: 18px;
@@ -1035,7 +1064,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-index { right: 6%; bottom: 20px; }
   .section { padding: 58px 5%; }
   .tool-card { grid-template-columns: 1fr; gap: 20px; padding: 18px; }
-  .tool-visual { min-height: 150px; }
   .tools-section { padding-top: 35px; }
   .section-heading { align-items: start; flex-direction: column; }
   .collection-count { align-self: flex-start; }
