@@ -217,7 +217,7 @@ const filterList = document.querySelector("#filter-list");
 const emptyState = document.querySelector("#empty-state");
 const collectionCount = document.querySelector("#collection-count");
 const languageSelect = document.querySelector("#language-select");
-let currentLanguage = "id";
+let currentLanguage = "en";
 let activeFilter = "all";
 
 function safeText(value) {
