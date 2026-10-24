@@ -257,6 +257,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   overflow: hidden;
   pointer-events: none;
 }
+.hero-effects-front {
+  z-index: 3;
+}
 .hero-effects span {
   position: absolute;
   left: var(--ember-left);
@@ -281,6 +284,32 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .hero-effects span:nth-child(10) { --ember-left: 92%; --ember-size: 5px; --ember-duration: 16s; --ember-delay: -11s; --ember-drift: -39px; }
 .hero-effects span:nth-child(11) { --ember-left: 33%; --ember-size: 4px; --ember-duration: 19s; --ember-delay: -16s; --ember-drift: 58px; }
 .hero-effects span:nth-child(12) { --ember-left: 73%; --ember-size: 3px; --ember-duration: 8s; --ember-delay: -5s; --ember-drift: -44px; }
+.hero-effects-front span {
+  --ember-size: 5px;
+  box-shadow: 0 0 9px 3px rgba(18, 235, 212, 0.9), 0 0 22px 7px rgba(114, 255, 240, 0.62), 0 0 38px rgba(116, 255, 158, 0.3);
+}
+.hero-effects-front span:nth-child(1) { --ember-left: 22%; --ember-duration: 13s; --ember-delay: -7s; --ember-drift: 46px; }
+.hero-effects-front span:nth-child(2) {
+  --ember-left: 44%;
+  --ember-size: 6px;
+  --ember-duration: 16s;
+  --ember-delay: -12s;
+  --ember-drift: -58px;
+  animation: chakra-ember var(--ember-duration) linear var(--ember-delay) infinite, chakra-glow 7s ease-in-out infinite;
+}
+.hero-effects-front span:nth-child(3) { --ember-left: 69%; --ember-duration: 11s; --ember-delay: -4s; --ember-drift: 42px; }
+.hero-effects-front span:nth-child(4) {
+  --ember-left: 88%;
+  --ember-size: 6px;
+  --ember-duration: 18s;
+  --ember-delay: -15s;
+  --ember-drift: -50px;
+  animation: chakra-ember var(--ember-duration) linear var(--ember-delay) infinite, chakra-glow 8s ease-in-out -2s infinite;
+}
+@keyframes chakra-glow {
+  0%, 100% { filter: brightness(0.75); }
+  50% { filter: brightness(1.8); }
+}
 @keyframes chakra-ember {
   0% { opacity: 0; transform: translate3d(0, 0, 0) scale(0.45); }
   12% { opacity: 0.85; }
@@ -584,6 +613,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .filter-list { display: flex; gap: 8px; flex-wrap: wrap; }
 .filter-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   border: 1px solid var(--line);
   border-radius: 5px;

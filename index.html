@@ -80,7 +80,10 @@
         </div>
       </aside>
 
-      <div class="hero-index"><span>01</span> / <span data-i18n="tenseiganArchive">TENSEIGAN ARCHIVE</span></div>
+      <div class="hero-effects hero-effects-front" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="hero-index"><span data-i18n="tenseiganArchive">TENSEIGAN ARCHIVE</span></div>
     </section>
 
     <section class="section mods-section" id="mods">
@@ -98,11 +101,11 @@
           <span aria-hidden="true">⌕</span>
           <input id="search-input" type="search" placeholder="Cari mod..." autocomplete="off" data-i18n-placeholder="searchPlaceholder" aria-label="Cari mod" data-i18n-aria="searchPlaceholder">
         </label>
-        <div class="filter-list" id="filter-list" aria-label="Filter kategori" data-i18n-aria="filterLabel">
+        <div class="filter-list" id="filter-list" aria-label="Filter kategori dan tautan toolkit" data-i18n-aria="filterLabel">
           <button class="filter-chip active" data-filter="all" data-i18n="filterAll">Semua</button>
           <button class="filter-chip" data-filter="remastered" data-i18n="filterRemastered">Remastered</button>
           <button class="filter-chip" data-filter="classic" data-i18n="filterClassic">Classic</button>
-          <button class="filter-chip" data-filter="other" data-i18n="filterTools">Tools</button>
+          <a class="filter-chip" href="#tools" data-i18n="filterTools">Tools</a>
         </div>
       </div>
 

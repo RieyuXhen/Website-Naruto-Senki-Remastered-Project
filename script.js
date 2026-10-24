@@ -64,7 +64,7 @@ const translations = {
     modsIntro: "Cari versi yang kamu butuhkan dan periksa detailnya sebelum mengunduh.",
     releases: "RILIS",
     searchPlaceholder: "Cari mod...",
-    filterLabel: "Filter kategori",
+    filterLabel: "Filter kategori dan toolkit",
     filterAll: "Semua",
     filterRemastered: "Remastered",
     filterClassic: "Klasik",
@@ -121,7 +121,7 @@ const translations = {
     modsIntro: "Find the version you need and check its details before downloading.",
     releases: "RELEASES",
     searchPlaceholder: "Search mods...",
-    filterLabel: "Category filters",
+    filterLabel: "Category filters and toolkit link",
     filterAll: "All",
     filterRemastered: "Remastered",
     filterClassic: "Classic",
@@ -178,7 +178,7 @@ const translations = {
     modsIntro: "查找所需版本，并在下载前查看详细信息。",
     releases: "个版本",
     searchPlaceholder: "搜索模组...",
-    filterLabel: "分类筛选",
+    filterLabel: "分类筛选和工具箱链接",
     filterAll: "全部",
     filterRemastered: "重制版",
     filterClassic: "经典版",
@@ -296,7 +296,7 @@ function setLanguage(language) {
     element.content = text[element.dataset.i18nContent];
   });
   menuToggle.setAttribute("aria-label", nav.classList.contains("open") ? text.menuClose : text.menuOpen);
-  setLanguage(currentLanguage);
+  renderMods();
 }
 
 languageSelect.addEventListener("change", () => setLanguage(languageSelect.value));
@@ -330,4 +330,4 @@ nav.querySelectorAll("a").forEach(link => {
   });
 });
 
-renderMods();
+setLanguage(currentLanguage);
