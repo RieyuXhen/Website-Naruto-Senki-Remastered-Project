@@ -427,7 +427,12 @@ button, a { -webkit-tap-highlight-color: transparent; }
   color: #251906;
   box-shadow: 0 5px 24px rgba(229, 195, 107, 0.28);
 }
-.button-download span {
+.button-download > span:first-child {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.button-download > span[aria-hidden="true"] {
+  display: inline-block;
   font-size: 17px;
   line-height: 1;
   transition: transform 0.2s ease;
@@ -436,7 +441,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transform: translateY(-2px);
   box-shadow: 0 8px 30px rgba(229, 195, 107, 0.48);
 }
-.button-download:hover span { transform: translateY(2px); }
+.button-download:hover > span:first-child { transform: translateY(-2px); }
+.button-download:hover > span[aria-hidden="true"] { transform: translateY(2px); }
 .button-primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--glow-strong);
@@ -450,6 +456,22 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button-ghost:hover {
   border-color: var(--accent-light);
   background: rgba(18, 235, 212, 0.12);
+}
+.button-discord {
+  border: 1px solid rgba(155, 164, 255, 0.52);
+  background: rgba(88, 101, 242, 0.22);
+  color: #e0e2ff;
+  box-shadow: none;
+}
+.button-discord:hover {
+  border-color: rgba(175, 182, 255, 0.82);
+  background: rgba(88, 101, 242, 0.32);
+  box-shadow: 0 4px 16px rgba(88, 101, 242, 0.24);
+}
+.button-discord svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 .hero-note {
   margin-top: 28px;
@@ -938,6 +960,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .footer p { max-width: 420px; color: #7a97a6; font-size: 9.5px; line-height: 1.7; }
 .footer-brand .brand-mark { width: 35px; height: 35px; }
 .footer-brand .brand-copy { font-size: 11px; }
+.footer-discord {
+  color: #b7bdf0;
+  font-size: 9px;
+  letter-spacing: 1.2px;
+  font-weight: 800;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+.footer-discord:hover {
+  color: #e0e2ff;
+  text-shadow: 0 0 10px rgba(88, 101, 242, 0.5);
+}
 .back-top {
   font-size: 9px;
   letter-spacing: 1.2px;
