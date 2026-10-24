@@ -722,7 +722,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   font-weight: 800;
   letter-spacing: 1.6px;
 }
-.tool-status span {
+.tool-status > span:first-child {
   width: 7px;
   height: 7px;
   border-radius: 50%;
