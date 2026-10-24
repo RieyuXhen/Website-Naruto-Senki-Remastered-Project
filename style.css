@@ -729,6 +729,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
   background: var(--accent-gold);
   box-shadow: 0 0 10px rgba(229, 195, 107, 0.7);
 }
+.tool-status.available > span:first-child {
+  background: var(--accent-orb);
+  box-shadow: 0 0 10px rgba(116, 255, 158, 0.7);
+}
 .tool-card-copy h3 {
   margin: 0 0 10px;
   font: 800 clamp(25px, 4vw, 36px)/1 var(--display);
@@ -737,6 +741,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .tool-card-copy h3 span {
   color: var(--accent-light);
 }
+.tool-download { margin-top: 18px; }
 .tool-card-copy > p:not(.tool-status) {
   max-width: 580px;
   margin: 0;
