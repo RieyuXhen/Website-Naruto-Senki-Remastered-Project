@@ -129,6 +129,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 }
 .nav a:hover::after { width: 100%; }
 
+@media (min-width: 861px) {
+  .site-header { padding-right: 4%; }
+  .nav {
+    margin-left: auto;
+    margin-right: 24px;
+  }
+}
+
 .menu-toggle {
   display: none;
   border: 1px solid var(--line);
@@ -137,6 +145,57 @@ button, a { -webkit-tap-highlight-color: transparent; }
   border-radius: 8px;
   padding: 9px 12px;
   cursor: pointer;
+}
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.language-select-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.language-icon {
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: var(--accent-light);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.6;
+  pointer-events: none;
+}
+.language-select {
+  appearance: none;
+  min-width: 58px;
+  padding: 8px 22px 8px 9px;
+  color: var(--accent-light);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.language-select:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 2px;
+}
+.language-select option {
+  color: var(--text);
+  background: var(--panel);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .hero {
@@ -823,29 +882,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   position: absolute;
   inset: 0;
   background: linear-gradient(0deg, rgba(4, 11, 18, 0.88) 0%, rgba(4, 11, 18, 0.15) 60%, transparent 100%);
-}
-.about-symbol-badge-link {
-  position: absolute;
-  z-index: 2;
-  left: 12px;
-  bottom: 10px;
-  display: block;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-}
-.about-symbol-badge {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border: 2px solid rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  box-shadow: var(--glow);
-}
-.about-symbol-badge-link:focus-visible {
-  outline: 2px solid var(--accent-light);
-  outline-offset: 3px;
 }
 .about-symbol span {
   position: absolute;

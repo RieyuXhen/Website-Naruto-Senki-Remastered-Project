@@ -4,34 +4,48 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050b12">
-  <meta name="description" content="Jelajahi proyek Naruto Senki Remastered oleh Rieyu Xhen, termasuk mod, peningkatan gameplay, dan tools untuk pengembangan mod Naruto Senki.">
-  <title>Naruto Senki Remastered - Rieyu Xhen</title>
+  <meta name="description" data-i18n-content="metaDescription" content="Jelajahi proyek Naruto Senki Remastered oleh Rieyu Xhen, termasuk mod, peningkatan gameplay, dan tools untuk pengembangan mod Naruto Senki.">
+  <title data-i18n="pageTitle">Naruto Senki Remastered - Rieyu Xhen</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
     <div class="brand">
-      <a class="brand-profile-link" href="https://youtube.com/@rieyu_xhen?si=d-hdJPHog0ykO6RF" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi channel YouTube Rieyu Xhen">
-        <img class="brand-mark" src="assets/youtube-profile.jpg" alt="">
+      <a class="brand-profile-link" href="https://youtube.com/@rieyu_xhen?si=d-hdJPHog0ykO6RF" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi channel YouTube Rieyu Xhen" data-i18n-aria="youtubeLabel">
+        <img class="brand-mark" src="assets/Rieyu%20Xhen.png" alt="">
       </a>
-      <span class="brand-copy"><small class="brand-header-copy"><span class="brand-tagline">Beyond the original
+      <span class="brand-copy"><small class="brand-header-copy"><span class="brand-tagline" data-i18n="tagline">Beyond the original
 
-      </span><span class="brand-description">Rebuilding the legacy of Naruto Senki.
-        <br>Developer &amp; Creator of Naruto Senki Remastered.
+      </span><span class="brand-description"><span data-i18n="brandDescription">Rebuilding the legacy of Naruto Senki.</span>
+        <br><span data-i18n="brandRole">Developer &amp; Creator of Naruto Senki Remastered.</span>
         <br>— Rieyu Xhen</span></small></span>
     </div>
-    <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
     <nav class="nav" id="nav">
-      <a href="#home">Home</a>
-      <a href="#mods">Mods</a>
-      <a href="#tools">Tools</a>
-      <a href="#about">About</a>
+      <a href="#home" data-i18n="navHome">Home</a>
+      <a href="#mods" data-i18n="navDownload">Download</a>
+      <a href="#tools" data-i18n="navTools">Tools</a>
+      <a href="#about" data-i18n="navAbout">About</a>
     </nav>
+    <div class="header-controls">
+      <label class="language-select-label">
+        <svg class="language-icon" viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="12" cy="12" r="9"></circle>
+          <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"></path>
+        </svg>
+        <span class="visually-hidden" data-i18n="languageLabel">Language</span>
+        <select class="language-select" id="language-select" aria-label="Language">
+          <option value="id">ID</option>
+          <option value="en">EN</option>
+          <option value="zh-CN">中文</option>
+        </select>
+      </label>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Buka menu" aria-expanded="false" data-i18n-aria="menuOpen">☰</button>
+    </div>
   </header>
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-art" role="img" aria-label="Banner Toneri Otsutsuki Tenseigan Chakra Mode"></div>
+      <div class="hero-art" role="img" aria-label="Banner Toneri Otsutsuki Tenseigan Chakra Mode" data-i18n-aria="heroBanner"></div>
       <div class="hero-shade"></div>
       <div class="hero-effects" aria-hidden="true">
         <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -40,21 +54,21 @@
       <div class="hero-content">
         <p class="eyebrow"><span class="pulse"></span> NARUTO SENKI REMASTERED PROJECT</p>
         <h1>NARUTO<br><span>SENKI</span><small>REMASTERED</small></h1>
-        <p class="hero-subtitle">Bangkitkan kembali semangat shinobi. Naruto Senki Remastered hadir dengan sentuhan baru, gameplay yang disempurnakan, dan modifikasi yang terus berkembang—melampaui batas versi aslinya.</p>
+        <p class="hero-subtitle" data-i18n="heroSubtitle">Bangkitkan kembali semangat shinobi. Naruto Senki Remastered hadir dengan sentuhan baru, gameplay yang disempurnakan, dan modifikasi yang terus berkembang—melampaui batas versi aslinya.</p>
         <div class="hero-badges">
           <span class="tenseigan-tag">✦ ENTER THE SHINOBI BATTLEFIELD</span>
           <span class="tenseigan-tag gold">勾玉 SHINOBI NO SEKAI</span>
         </div>
         <div class="hero-actions">
-          <a class="button button-download" href="#mods">DOWNLOAD MODS <span aria-hidden="true">↓</span></a>
-          <a class="button button-ghost" href="#about">ABOUT PROJECT</a>
+          <a class="button button-download" href="#mods"><span data-i18n="downloadMods">DOWNLOAD</span> <span aria-hidden="true">↓</span></a>
+          <a class="button button-ghost" href="#about" data-i18n="aboutProject">ABOUT PROJECT</a>
         </div>
         <p class="hero-note">UNOFFICIAL FAN PROJECT · BY RIEYU XHEN</p>
       </div>
 
-      <aside class="hero-showcase" aria-label="Potret Toneri Otsutsuki">
+      <aside class="hero-showcase" aria-label="Potret Toneri Otsutsuki" data-i18n-aria="toneriPortrait">
         <div class="hero-showcase-frame">
-          <img src="assets/toneri-portrait.jpg" alt="Toneri Otsutsuki Tenseigan Portrait">
+          <img src="assets/toneri-portrait.jpg" alt="Toneri Otsutsuki Tenseigan Portrait" data-i18n-alt="toneriPortrait">
           <div class="hero-showcase-caption">
             <div>
               <small>NARUTO SENKI</small>
@@ -66,15 +80,15 @@
         </div>
       </aside>
 
-      <div class="hero-index"><span>01</span> / TENSEIGAN ARCHIVE</div>
+      <div class="hero-index"><span>01</span> / <span data-i18n="tenseiganArchive">TENSEIGAN ARCHIVE</span></div>
     </section>
 
     <section class="section mods-section" id="mods">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">THE COLLECTION</p>
-          <h2>Explore <span>Mods.</span></h2>
-          <p class="section-description">Cari versi yang lo butuhkan dan cek detailnya sebelum download.</p>
+          <p class="eyebrow" data-i18n="collection">THE COLLECTION</p>
+          <h2><span data-i18n="explore">Explore</span> <span data-i18n="mods">Mods.</span></h2>
+          <p class="section-description" data-i18n="modsIntro">Cari versi yang lo butuhkan dan cek detailnya sebelum download.</p>
         </div>
         <span class="collection-count" id="collection-count">02 RELEASES</span>
       </div>
@@ -82,29 +96,29 @@
       <div class="tools">
         <label class="search-box">
           <span aria-hidden="true">⌕</span>
-          <input id="search-input" type="search" placeholder="Cari mod..." autocomplete="off">
+          <input id="search-input" type="search" placeholder="Cari mod..." autocomplete="off" data-i18n-placeholder="searchPlaceholder" aria-label="Cari mod" data-i18n-aria="searchPlaceholder">
         </label>
-        <div class="filter-list" id="filter-list" aria-label="Filter kategori">
-          <button class="filter-chip active" data-filter="all">Semua</button>
-          <button class="filter-chip" data-filter="remastered">Remastered</button>
-          <button class="filter-chip" data-filter="classic">Classic</button>
-          <button class="filter-chip" data-filter="other">Lainnya</button>
+        <div class="filter-list" id="filter-list" aria-label="Filter kategori" data-i18n-aria="filterLabel">
+          <button class="filter-chip active" data-filter="all" data-i18n="filterAll">Semua</button>
+          <button class="filter-chip" data-filter="remastered" data-i18n="filterRemastered">Remastered</button>
+          <button class="filter-chip" data-filter="classic" data-i18n="filterClassic">Classic</button>
+          <button class="filter-chip" data-filter="other" data-i18n="filterTools">Tools</button>
         </div>
       </div>
 
       <div class="mod-grid" id="mod-list" aria-live="polite"></div>
-      <p class="empty-state hidden" id="empty-state">Mod tidak ditemukan. Coba kata kunci lain.</p>
-      <p class="small-note">Pastikan file berasal dari sumber tepercaya. Periksa versi, ukuran, dan petunjuk instalasi sebelum memasang APK.</p>
+      <p class="empty-state hidden" id="empty-state" data-i18n="emptyState">Mod tidak ditemukan. Coba kata kunci lain.</p>
+      <p class="small-note" data-i18n="downloadNote">Pastikan file berasal dari sumber tepercaya. Periksa versi, ukuran, dan petunjuk instalasi sebelum memasang APK.</p>
     </section>
 
     <section class="section tools-section" id="tools">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">CREATOR TOOLKIT</p>
-          <h2>Tools for <span>Naruto Senki Modding.</span></h2>
-          <p class="section-description">Custom-built tools to support the creation and development of Naruto Senki mods.</p>
+          <p class="eyebrow" data-i18n="creatorToolkit">CREATOR TOOLKIT</p>
+          <h2><span data-i18n="toolsFor">Tools for</span> <span data-i18n="modding">Naruto Senki Modding.</span></h2>
+          <p class="section-description" data-i18n="toolsIntro">Custom-built tools to support the creation and development of Naruto Senki mods.</p>
         </div>
-        <span class="collection-count">IN DEVELOPMENT</span>
+        <span class="collection-count" data-i18n="inDevelopment">IN DEVELOPMENT</span>
       </div>
 
       <article class="tool-card">
@@ -116,34 +130,31 @@
           <span class="tool-grid-mark">RX</span>
         </div>
         <div class="tool-card-copy">
-          <p class="tool-status"><span></span> PROJECT IN DEVELOPMENT</p>
+          <p class="tool-status"><span></span> <span data-i18n="projectInDevelopment">PROJECT IN DEVELOPMENT</span></p>
           <h3>RX Toolkit</h3>
-          <p>Tool pengembangan buatan Rieyu Xhen yang terinspirasi dari Texture Packer dan sedang disempurnakan dengan pendekatan yang lebih lengkap.</p>
-          <span class="tool-coming-soon">DETAILS COMING SOON</span>
+          <p data-i18n="toolDescription">Tool pengembangan buatan Rieyu Xhen yang terinspirasi dari Texture Packer dan sedang disempurnakan dengan pendekatan yang lebih lengkap.</p>
+          <span class="tool-coming-soon" data-i18n="detailsComingSoon">DETAILS COMING SOON</span>
         </div>
       </article>
     </section>
 
     <section class="about-section" id="about">
       <div class="about-symbol">
-        <img src="assets/toneri-portrait.jpg" alt="Toneri Otsutsuki">
-        <a class="about-symbol-badge-link" href="https://youtube.com/@rieyu_xhen?si=d-hdJPHog0ykO6RF" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi channel YouTube Rieyu Xhen">
-          <img class="about-symbol-badge" src="assets/youtube-profile.jpg" alt="">
-        </a>
+        <img src="assets/toneri-portrait.jpg" alt="Toneri Otsutsuki" data-i18n-alt="toneriPortrait">
         <span>✦</span>
       </div>
       <div class="about-copy">
-        <p class="eyebrow">ABOUT THE PROJECT</p>
-        <h2>More than just a<br><span>Game</span></h2>
-        <p>An independent development project focused on exploring the possibilities of Naruto Senki.<br><br>From remastered releases and gameplay improvements to modding tools and technical documentation, this platform documents the ongoing journey of developing Naruto Senki beyond its original limitations.</p>
+        <p class="eyebrow" data-i18n="aboutEyebrow">ABOUT THE PROJECT</p>
+        <h2><span data-i18n="aboutHeading">More than just a</span><br><span data-i18n="game">Game</span></h2>
+        <p data-i18n="aboutDescription">An independent development project focused on exploring the possibilities of Naruto Senki.<br><br>From remastered releases and gameplay improvements to modding tools and technical documentation, this platform documents the ongoing journey of developing Naruto Senki beyond its original limitations.</p>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="brand footer-brand"><a class="brand-profile-link" href="https://youtube.com/@rieyu_xhen?si=d-hdJPHog0ykO6RF" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi channel YouTube Rieyu Xhen"><img class="brand-mark" src="assets/youtube-profile.jpg" alt=""></a><span class="brand-copy">RIEYU <b>XHEN</b><small>Naruto Senki Remastered Project</small></span></div>
-    <p>Fan-made project. Naruto and related assets belong to their respective rights holders.</p>
-    <a href="#home" class="back-top">BACK TO TOP ↑</a>
+    <div class="brand footer-brand"><a class="brand-profile-link" href="https://youtube.com/@rieyu_xhen?si=d-hdJPHog0ykO6RF" target="_blank" rel="noopener noreferrer" aria-label="Kunjungi channel YouTube Rieyu Xhen" data-i18n-aria="youtubeLabel"><img class="brand-mark" src="assets/Rieyu%20Xhen.png" alt=""></a><span class="brand-copy">RIEYU <b>XHEN</b><small data-i18n="brandFooter">Naruto Senki Remastered Project</small></span></div>
+    <p data-i18n="footerDisclaimer">Fan-made project. Naruto and related assets belong to their respective rights holders.</p>
+    <a href="#home" class="back-top" data-i18n="backToTop">BACK TO TOP ↑</a>
   </footer>
 
   <script src="script.js"></script>
