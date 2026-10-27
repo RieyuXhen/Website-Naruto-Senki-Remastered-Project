@@ -754,9 +754,14 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .tool-card-copy h3 span {
   color: var(--accent-light);
 }
+.tool-download-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
 .tool-download {
   min-height: 48px;
-  margin-top: 24px;
   padding-inline: 22px;
   border-radius: 7px;
 }
